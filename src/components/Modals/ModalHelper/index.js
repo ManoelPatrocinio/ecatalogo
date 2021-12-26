@@ -1,0 +1,48 @@
+import * as C from "./style";
+import ReactDOM from "react-dom";
+import MySelf from "../../../assets/images/mySelf.jpg";
+
+const portalRoot = document.getElementById("root_portalHelper");
+
+export const ModalHelper = ({ isOpenHelp, onClickBtnClose }) => {
+  if (!isOpenHelp) {
+    return null;
+  }
+  return ReactDOM.createPortal(
+    <C.Container onClick={onClickBtnClose}>
+      <C.ModalContent>
+        <button className="btnModalClose" onClick={onClickBtnClose}>
+          X
+        </button>
+        <C.Content>
+          <header>
+            <div className="WrapperImgPefil">
+              {" "}
+              <img src={MySelf} alt="perfumeX natura" />{" "}
+            </div>
+            <h1>Olá, Seja Bem vindo ao meu catálogo Digital !</h1>
+            <p>
+              Nesse catálogo você encontrará todos os produtos que eu possou
+              para pronta entrega. Se eu não tiver o que você estar procurando
+              entre em contato comigo, pelo número:
+              <a id="HelperNumberLink"> (74) 98839-3944</a>.
+            </p>
+          </header>
+
+          <main>
+            <h3>Instruções de Uso:</h3>
+            
+            <ul id="listInstrution">
+              <li>Clique nas imagens para ver em um tamanho maior.</li>
+              <li>Cique no icone  para ver as informações do produto.</li>
+              <li>Clique no botão Solicitar, para enviar uma mensagem pelo whatsapp, com as informações do produto para a consultora.</li>
+              <li>Cique no icone do whatsapp na tela para iniciar uma conversar no whatsapp com a consultora.</li> 
+            </ul>
+          </main>
+        </C.Content>
+        
+      </C.ModalContent>
+    </C.Container>,
+    portalRoot
+  );
+};
