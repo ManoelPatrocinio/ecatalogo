@@ -6,6 +6,7 @@ import { CardItem } from "./components/CardItem";
 import { Footer } from "./components/Footer";
 import {ModalProduct} from "./components/Modals/ModalProduct"
 import { ModalHelper } from './components/Modals/ModalHelper';
+import { Produtos } from './data/productList';
 
 function App() {
 
@@ -27,14 +28,11 @@ function App() {
 
           <C.CardContent >
 
-            <CardItem onClickImg={()=> setProductId(1)}/>
-            <CardItem/>
-            <CardItem/>
-            <CardItem/>
-            <CardItem/>
-            <CardItem/>
-            <CardItem/>
-            <CardItem/>
+            {Produtos.map((item, index) => (
+            <CardItem  key={index} product={item}  onClickImg={()=> setProductId(item.id)}            />
+
+            ))}
+           
           </C.CardContent>
         </C.SectionContent>
           

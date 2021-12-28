@@ -25,7 +25,7 @@ export const ModalHelper = ({ isOpenHelp, onClickBtnClose }) => {
               Nesse catálogo você encontrará todos os produtos que eu possou
               para pronta entrega. Se eu não tiver o que você estar procurando
               entre em contato comigo, pelo número:
-              <a id="HelperNumberLink"> (74) 98839-3944</a>.
+              <a  href="https://api.whatsapp.com/send?phone=+5574988193405"  target="_blank"  rel="noopener noreferrer" id="HelperNumberLink"> (74) 98839-3944</a>.
             </p>
           </header>
 

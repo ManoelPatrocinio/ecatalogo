@@ -30,23 +30,28 @@ export const Container = styled.div`
     align-items: center;
     justify-content: start;
     text-align: center;
-    padding: 4% 0;
+    padding: 2% 0;
   }
   .ProdTitle {
     color: #ff7c34;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
-    -webkit-line-clamp: 2; //limita o numero de linhas
+    width: 100%;
+    max-height: 35px;
+    overflow-x: auto;
+  }
+  .ProdTitle:-webkit-scrollbar {
+    width: 2px; 
   }
   .ProdInStock {
     font-size: 0.8rem;
     color: #767070;
+    margin: 3% 0;
   }
   .price {
     color: #1baf67;
     font-size: 1rem;
     font-weight: 500;
-    margin: 5% 0 0 0;
   }
 
   .btnRequest {
@@ -69,7 +74,7 @@ export const Container = styled.div`
 
     .ProdTitle {
       color: #ff7c34;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 500;
       -webkit-line-clamp: 2; //limita o numero de linhas
     }
@@ -81,7 +86,6 @@ export const Container = styled.div`
       color: #1baf67;
       font-size: 1.2rem;
       font-weight: 500;
-      margin: 5% 0 0 0;
     }
   }
 
