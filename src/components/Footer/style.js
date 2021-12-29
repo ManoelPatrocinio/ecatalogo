@@ -36,6 +36,8 @@ export const IconContent = styled.div`
 
     padding: 3% 0 3% 0;
     .linkContactFooter {
+      width: 35px;
+    height: 35px;
       margin: 0 1%;
     }
   }

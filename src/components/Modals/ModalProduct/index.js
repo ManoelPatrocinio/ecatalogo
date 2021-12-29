@@ -1,10 +1,9 @@
 import * as C from "./style";
 import  ReactDOM  from "react-dom";
-import prodImg from "../../../assets/images/p1.svg";
 
 const  portalRoot = document.getElementById('root_portal')
 
-export const ModalProduct = ({isOpen,onClickBtnClose}) => {
+export const ModalProduct = ({isOpen,onClickBtnClose,item}) => {
 
   if(!isOpen){
     return null
@@ -14,18 +13,18 @@ export const ModalProduct = ({isOpen,onClickBtnClose}) => {
       <C.ModalContent>
         <button className="btnModalClose" onClick={onClickBtnClose}>X</button>
         <C.Content className="ContentIMG">
-          <img src={prodImg} alt="perfume natura" />
+          <img src={item.imageUrl} alt="perfume natura" />
         </C.Content>
         <C.Content className="ContentDetals">
           <header>
             <h1>Detalhes</h1>
 
-            <h3 className="ProdTitle">Colonia Paz e Humor 200ml</h3>
-            <small className="ProdInStock">2 em estoque</small>
+            <h3 className="ProdTitle">{item.title}</h3>
+            <small className="ProdInStock">{item.qtdInStock} em estoque</small>
           </header>
           <article>
             <h4>
-              Preço: <span className="price">R$ 64.70</span>{" "}
+              Preço: <span className="price">R$ {item.price}</span>{" "}
             </h4>{" "}
             <br />
             <h4>Descrição:</h4>

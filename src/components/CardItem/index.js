@@ -1,5 +1,11 @@
+import React, { useState } from 'react';
 import * as C from "./style";
-export const CardItem = ({ onClickImg,product }) => {
+import {ModalProduct} from "../Modals/ModalProduct"
+
+export const CardItem = ({ product }) => {
+
+  const [productState, setProductState] = useState(null); 
+
 
   function whatsappLinkGenerator ( productTitle, productPrice){
     const message =  `http://api.whatsapp.com/send?l=pt_BR&phone=+5574988193405&text=Olá jú ! Eu Tenho interesse no produto ${productTitle}, de preço: ${productPrice}. Ainda estar disponível ?`;
@@ -10,13 +16,13 @@ export const CardItem = ({ onClickImg,product }) => {
 
   return (
     <C.Container>
-      <div className="imgContent" onClick={onClickImg}>
+      <div className="imgContent" onClick={()=>setProductState(product.id)}>
         <img
           src={product.imageUrl}
           alt="perfume natura"
         />
       </div>
-      <div className="DescriptionContent" onClick={onClickImg}>
+      <div className="DescriptionContent" >
         <h3 className="ProdTitle">{product.title}</h3>
         <small className="ProdInStock">{product.qtdInStock} em estoque</small>
         <h4 className="price">R$ {product.price} </h4>
@@ -24,6 +30,8 @@ export const CardItem = ({ onClickImg,product }) => {
       <button className="btnRequest" onClick={()=>whatsappLinkGenerator(product.title, product.price)}>
         Solicitar<i className="fab fa-whatsapp"></i>
       </button>
+      <ModalProduct isOpen={Boolean(productState)} onClickBtnClose={()=>setProductState(null)} item={product}/>
+
     </C.Container>
   );
 };
