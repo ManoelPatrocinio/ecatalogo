@@ -6,6 +6,8 @@ export const Container = styled.div`
   display: block;
   background-color: #ffffff;
   box-shadow: 0px 2px 5px #cecece;
+  overflow-x: auto;
+
   @media (max-width: 480px) {
     overflow-x: auto;
   }

@@ -2,7 +2,7 @@ export const Produtos = [
     
     {
         id: 1,
-        category: "perfumaria",
+        category: "Perfumaria",
         imageUrl:"https://static.natura.com/cdn/ff/po9jV1Ghi9iNE4PtGLI1AdYXDx-vPOx-fVSU1_5Id7s/1640585076/public/products/77431_5.jpg",
         title:"Biografia Inspire Desodorante Colônia Feminino",
         qtdInStock: 1,
@@ -10,7 +10,7 @@ export const Produtos = [
     },
     {
         id: 2,
-        category: "perfumaria",
+        category: "Perfumaria",
         imageUrl:"https://static.natura.com/cdn/ff/bCg8tW-ReFrrZgj7NWNE6h5St_dUjDtQyWfSXamfYSQ/1640585149/public/products/18529_3.jpg",
         title:"Kaiak Vital Desodorante Colônia Masculino",
         qtdInStock: 1,
@@ -18,7 +18,7 @@ export const Produtos = [
     },
     {
         id: 3,
-        category: "perfumaria",
+        category: "Perfumaria",
         imageUrl:"https://static.natura.com/cdn/ff/Kkqw5iRwCBZzzilX0J-0q0T8aO8tHiX5FTQiPZH8UIQ/1640584463/public/products/101318_3.jpg",
         title:"Presente Natura Ekos Madeira Em Flor",
         qtdInStock: 1,
@@ -26,7 +26,7 @@ export const Produtos = [
     },
     {
         id: 4,
-        category: "perfumaria",
+        category: "Perfumaria",
         imageUrl:"https://static.natura.com/cdn/ff/Htkc4SDPBwt7WOAIcLgcElBji_xVQMjm7lxY85Dofns/1640583754/public/products/107567_3.jpg",
         title:"Presente Natura Luna Absoluta",
         qtdInStock: 1,
@@ -34,7 +34,7 @@ export const Produtos = [
     },
     {
         id: 5,
-        category: "perfumaria",
+        category: "Perfumaria",
         imageUrl:"https://static.natura.com/cdn/ff/iSP-0rlIR1RObQWfjeX88bxR2KmICcBAd3n85WerJgc/1640585475/public/products/107691_0.jpg",
         title:"Presente Natura Kaiak Feminino",
         qtdInStock: 1,

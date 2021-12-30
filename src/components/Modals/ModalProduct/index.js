@@ -8,6 +8,11 @@ export const ModalProduct = ({isOpen,onClickBtnClose,item}) => {
   if(!isOpen){
     return null
   }
+  function whatsappLinkGenerator ( productTitle, productPrice){
+    const message =  `http://api.whatsapp.com/send?l=pt_BR&phone=+5574988193405&text=Olá jú ! Eu Tenho interesse no produto ${productTitle}, de preço: ${productPrice}. Ainda estar disponível ?`;
+    window.location.href = message
+    
+  }
   return ReactDOM.createPortal(
     <C.Container onClick={onClickBtnClose}>
       <C.ModalContent>
@@ -34,7 +39,7 @@ export const ModalProduct = ({isOpen,onClickBtnClose,item}) => {
             </p>
           </article>
           <footer>
-            <p>Entre em contato, podemos negociar</p>
+            <button className="btnRequest" onClick={()=>whatsappLinkGenerator(item.title, item.price)}>Entrar em contato <i className="fab fa-whatsapp"></i></button>
           </footer>
         </C.Content>
       </C.ModalContent>

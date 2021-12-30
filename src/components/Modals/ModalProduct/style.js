@@ -52,10 +52,14 @@ export const ModalContent = styled.div`
     height: auto;
     flex-direction: column;
 
-    .ContentIMG,
-    .ContentDetals {
+    .ContentIMG {
       width: 100%;
-      height: 50%;
+      height: 55%;
+    }
+    .ContentDetals{
+      width: 100%;
+      height: 45%;
+      border-top: 1px solid #cecece;
     }
   }
 `;
@@ -71,7 +75,7 @@ export const Content = styled.div`
 
   header {
     width: 100%;
-    max-height: 30%;
+    max-height: 40%;
   }
   header h1 {
     width: 100%;
@@ -83,27 +87,45 @@ export const Content = styled.div`
   }
   article {
     text-align: left;
-    padding: 0 0 0 10%;
-    max-height: 60%;
-
+    padding: 0 0 0 5%;
+    max-height: 40%;
+  }
+  footer {
+    width: 100%;
+    max-height: 20%;
   }
 
   .ProdTitle {
     color: #ff7c34;
     font-size: 1rem;
     font-weight: 500;
-    margin: 4% 0 0 0;
-    -webkit-line-clamp: 2; //limita o numero de linhas
+    width: 100%;
+    max-height: 35px;
+    overflow-x: auto;
+    margin: 3% 0 0 0;
+
+  }
+  .ProdTitle:-webkit-scrollbar {
+    width: 2px;
   }
   .ProdInStock {
     font-size: 0.8rem;
     color: #767070;
+    margin: 3% 0;
   }
   .price {
     color: #1baf67;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
-    margin: 5% 0 0 0;
+  }
+  .btnRequest {
+    width: 100%;
+    background-color: #1baf67;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    padding: 2% 0;
+    cursor: pointer;
   }
 
   footer p {
@@ -111,4 +133,30 @@ export const Content = styled.div`
     color: #ff7c34;
   }
 
+  @media (max-width: 480px) {
+    header h1 {
+      display: none;
+    }
+
+    .ProdInStock {
+      font-size: 0.8rem;
+      color: #767070;
+      margin: 5% 0;
+    }
+    footer{
+      height: 17%;
+    max-height: 23%;
+    }
+    .btnRequest {
+      width: 100%;
+      height: 100%;
+      background-color: #1baf67;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 300;
+      border: none;
+      padding: 2% 0;
+      cursor: pointer;
+    }
+  }
 `;

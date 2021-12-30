@@ -33,10 +33,8 @@ export const ModalHelper = ({ isOpenHelp, onClickBtnClose }) => {
             <h3>Instruções de Uso:</h3>
             
             <ul id="listInstrution">
-              <li>Clique nas imagens para ver em um tamanho maior.</li>
-              <li>Cique no icone  para ver as informações do produto.</li>
+              <li>Clique nas imagens para ver as informações dos produtos</li>
               <li>Clique no botão Solicitar, para enviar uma mensagem pelo whatsapp, com as informações do produto para a consultora.</li>
-              <li>Cique no icone do whatsapp na tela para iniciar uma conversar no whatsapp com a consultora.</li> 
             </ul>
           </main>
         </C.Content>
