@@ -2,15 +2,16 @@ import * as C from "./style";
 import  ReactDOM  from "react-dom";
 
 const  portalRoot = document.getElementById('root_portal')
-const MyPhone = process.env.REACT_APP_MY_NUMBER;
 
 export const ModalProduct = ({isOpen,onClickBtnClose,item}) => {
-
+  
+  const MyPhone = process.env.REACT_APP_MY_NUMBER;
   if(!isOpen){
     return null
   }
   function whatsappLinkGenerator ( productTitle, productPrice){
-    const message =  `http://api.whatsapp.com/send?l=pt_BR&phone=+${MyPhone}=Olá jú ! Eu Tenho interesse no produto ${productTitle}, de preço: ${productPrice}. Ainda estar disponível ?`;
+    const message =  `http://api.whatsapp.com/send?l=pt_BR&phone=+${MyPhone}&text=Olá jú ! Eu Tenho interesse no produto ${productTitle}, de preço: ${productPrice}. Ainda estar disponível ?`;
+
     window.location.href = message
     
   }
