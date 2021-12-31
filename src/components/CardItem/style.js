@@ -12,6 +12,13 @@ export const Container = styled.div`
   box-shadow: 2px 0px 5px #e5e5e5;
   cursor: pointer;
 
+  /*
+  transition: 0.3s all ease-out;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+*/
   .imgContent {
     width: 100%;
     height: 55%;
@@ -41,7 +48,7 @@ export const Container = styled.div`
     overflow-x: auto;
   }
   .ProdTitle:-webkit-scrollbar {
-    width: 2px; 
+    width: 2px;
   }
   .ProdInStock {
     font-size: 0.8rem;
@@ -91,7 +98,7 @@ export const Container = styled.div`
 
   @media (min-width: 480px) and (max-width: 678px) {
     width: 20rem;
-       height: 23rem;
+    height: 23rem;
 
     .ProdTitle {
       color: #ff7c34;

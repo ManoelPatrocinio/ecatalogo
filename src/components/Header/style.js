@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Header_Background from "../../assets/images/Header_background.jpg"
 
 export const Container = styled.div`
     width: 100%;
@@ -8,9 +7,9 @@ export const Container = styled.div`
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-image: url(${Header_Background});
+    background-image: url('https://cdn.stocksnap.io/img-thumbs/960w/fence-vine_TK9GYE7LLO.jpg');
     background-repeat: no-repeat;
-    background-position: 100% 100%;
+    background-position: 100% 96%;
     background-size: cover;
     
    
@@ -31,6 +30,7 @@ export const Container = styled.div`
         width: 14rem;
         font-family: 'Roboto', sans-serif;
         text-align: center;
+        text-shadow: 0px 0px 1px #f5f5f5;
     }
     @media (max-width: 680px) and (orientation: landscape) { 
         width: 100%;

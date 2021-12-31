@@ -9,22 +9,26 @@ import { Produtos } from "./data/productList";
 
 function App() {
   const [helper, sethelper] = useState(false);
-  const [catSelected, setCatSelected] = useState('Perfumaria');
-  console.log(catSelected)
+  const [catSelected, setCatSelected] = useState("Perfumaria");
+  console.log(catSelected);
   return (
     <C.Container>
       <C.Fixed>
         <Header onClickHelper={() => sethelper(true)} />
-        <Categorias setValue={setCatSelected}/>
+        <Categorias setValue={setCatSelected} />
       </C.Fixed>
 
       <C.Main>
         <C.SectionContent>
-          <C.SectionTitle>{catSelected}</C.SectionTitle>
+          <C.SectionTitle>
+            <div className="titleLine"></div> 
+            <h1> {catSelected}</h1>
+            <div className="titleLine"></div>
+          </C.SectionTitle>
 
           <C.CardContent>
-            {Produtos.filter((item) => item.category === catSelected)
-            .map((item, index) => (
+            {Produtos.filter((item) => item.category === catSelected).map(
+              (item, index) => (
                 <CardItem key={index} product={item} />
               )
             )}

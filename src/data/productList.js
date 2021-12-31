@@ -65,5 +65,13 @@ export const Produtos = [
         qtdInStock: 1,
         price:55.90,
     },
+    {
+        id: 8,
+        category: "Perfumaria",
+        imageUrl:"https://static.natura.com/cdn/ff/VLMdq1fXnwF1sidFX3TyPXsGE0r9yRKmTmcPMqBnGBU/1640600384/public/styles/medium/public/products/86728_1_21.jpg?itok=0INuOSSF",
+        title:"Paz e Humor Desodorante Colônia",
+        qtdInStock: 1,
+        price:90.00,
+    },
 ]
 

@@ -5,10 +5,12 @@ import {ModalProduct} from "../Modals/ModalProduct"
 export const CardItem = ({ product }) => {
 
   const [productState, setProductState] = useState(null); 
+const MyPhone = process.env.REACT_APP_MY_NUMBER;
+
 
 
   function whatsappLinkGenerator ( productTitle, productPrice){
-    const message =  `http://api.whatsapp.com/send?l=pt_BR&phone=+5574988193405&text=Olá jú ! Eu Tenho interesse no produto ${productTitle}, de preço: ${productPrice}. Ainda estar disponível ?`;
+    const message =  `http://api.whatsapp.com/send?l=pt_BR&phone=+${MyPhone}&text=Olá jú ! Eu Tenho interesse no produto ${productTitle}, de preço: ${productPrice}. Ainda estar disponível ?`;
     window.location.href = message
     
   }

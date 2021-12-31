@@ -24,6 +24,7 @@ export const UlContent = styled.ul`
     padding: 4px 1%;
     font-weight: 500;
     font-size: 1.2rem;
+    width: 8.875rem;
     cursor: pointer;
   }
 
