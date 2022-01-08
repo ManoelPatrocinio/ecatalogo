@@ -8,7 +8,7 @@
 
 Este projeto é um Catalogo digital com link de envio do pedido de compra, já com as informações do produto selecionado, pelo whatsapp.
 
-[Confira o projeto](https://catalogodaju.netlify.app/) 
+[Confira o projeto](https://ecatalogo-manoelpatrocinio.vercel.app/) 
 
 
 ## TECNOLOGIAS USADAS
