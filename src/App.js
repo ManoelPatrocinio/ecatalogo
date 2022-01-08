@@ -10,29 +10,45 @@ import { Produtos } from "./data/productList";
 function App() {
   const [helper, sethelper] = useState(false);
   const [catSelected, setCatSelected] = useState("Perfumaria");
-  console.log(catSelected);
+  const [search, setSearch] = useState("");
+
   return (
     <C.Container>
       <C.Fixed>
-        <Header onClickHelper={() => sethelper(true)} />
+        <Header
+          onClickHelper={() => sethelper(true)}
+          setValue={setSearch}
+          value={search}
+         
+        />
         <Categorias setValue={setCatSelected} />
       </C.Fixed>
 
       <C.Main>
         <C.SectionContent>
           <C.SectionTitle>
-            <div className="titleLine"></div> 
+            <div className="titleLine"></div>
             <h1> {catSelected}</h1>
             <div className="titleLine"></div>
           </C.SectionTitle>
 
-          <C.CardContent>
-            {Produtos.filter((item) => item.category === catSelected).map(
-              (item, index) => (
-                <CardItem key={index} product={item} />
-              )
-            )}
-          </C.CardContent>
+          {!search ? (
+            <C.CardContent>
+              {Produtos.filter((item) => item.category === catSelected).map(
+                (item, index) => (
+                  <CardItem key={index} product={item} />
+                )
+              )}
+            </C.CardContent>
+          ) : (
+            <C.CardContent>
+              {Produtos.filter((produto) =>
+                produto.title.toLowerCase().includes(search.toLowerCase())
+              ).map((produto, index) => (
+                <CardItem key={index} product={produto} />
+              ))}
+            </C.CardContent>
+          )}
         </C.SectionContent>
       </C.Main>
       <Footer />
