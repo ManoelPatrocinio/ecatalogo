@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 6rem;
+  min-height: 6rem;
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -33,7 +34,7 @@ export const Container = styled.div`
   }
   @media (max-width: 680px) and (orientation: landscape) {
     width: 100%;
-    height: 4rem;
+    height: 4rem !important;
   }
 `;
 export const ItemHeaderContent = styled.div`
@@ -127,9 +128,12 @@ export const ItemHeaderContent = styled.div`
       visibility: visible !important;
       width: 16rem !important;
       bottom: 1.6rem;
-
       height: 3rem;
      
+    }
+    .formSearch{
+      right: 3.5rem;
+      margin-top:2%;
     }
     .formSearch input{
       border-radius: 25px !important;

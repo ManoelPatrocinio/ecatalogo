@@ -29,10 +29,11 @@ export const Container = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  width: 42rem;
-  height: 25rem;
+     width: 50rem;
+    height: 26rem;
   max-width: 95%;
   max-height: 95%;
+  margin-top: 2%;
 
   display: flex;
   position: relative;

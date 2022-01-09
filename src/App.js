@@ -19,7 +19,6 @@ function App() {
           onClickHelper={() => sethelper(true)}
           setValue={setSearch}
           value={search}
-         
         />
         <Categorias setValue={setCatSelected} />
       </C.Fixed>
@@ -31,14 +30,13 @@ function App() {
             <h1> {catSelected}</h1>
             <div className="titleLine"></div>
           </C.SectionTitle>
-
           {!search ? (
             <C.CardContent>
               {Produtos.filter((item) => item.category === catSelected).map(
                 (item, index) => (
                   <CardItem key={index} product={item} />
                 )
-              )}
+               )}
             </C.CardContent>
           ) : (
             <C.CardContent>
