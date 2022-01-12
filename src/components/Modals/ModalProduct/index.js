@@ -35,10 +35,8 @@ export const ModalProduct = ({isOpen,onClickBtnClose,item}) => {
             </h4>{" "}
             <br />
             <h4>Descrição:</h4>
-            <p>
-              Aqui será inserido a descrição e/ou informações adicionais do
-              produto{" "}
-            </p>
+            {item.description ? (<p>{item.description}</p>) : <p></p>}  
+           
           </article>
           <footer>
             <button className="btnRequest" onClick={()=>whatsappLinkGenerator(item.title, item.price)}>Entrar em contato <i className="fab fa-whatsapp"></i></button>

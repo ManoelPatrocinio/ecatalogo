@@ -15,7 +15,7 @@ export const Footer = () => {
         <a   href={linkWhatsapp} rel="noopener noreferrer" className="linkContactFooter"><img src={Logo_instagram} alt="link intragram" ></img></a>
         <a   href={linkWhatsapp} rel="noopener noreferrer" className="linkContactFooter"><img src={Logo_facebook} alt="link facebook"></img></a>
       </C.IconContent>
-      <p id="copyright">Copyright 	&copy; <a href="https://www.instagram.com/patrocinioiii/"  rel="noopener noreferrer">Manoel Patrocinio</a></p>
+      <p id="copyright">Copyright 	&copy; <a href="https://www.instagram.com/patrocinioiii/"  rel="noopener noreferrer">Manoel Patrocinio, 2022</a></p>
       <p id="credits"> Créditos pelas imagens: <a href="https://www.natura.com.br/"  alt="site natura">Natura </a> 
       |  <a href="https://stocksnap.io/author/kellyishmael"  > Kelly Ishmael </a>  | <a href="https://stocksnap.io"  > StockSnap </a></p>
     </C.Container>

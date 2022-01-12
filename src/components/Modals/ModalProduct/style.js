@@ -29,8 +29,8 @@ export const Container = styled.div`
 `;
 
 export const ModalContent = styled.div`
-     width: 50rem;
-    height: 26rem;
+  width: 50rem;
+  height: 26rem;
   max-width: 95%;
   max-height: 95%;
   margin-top: 2%;
@@ -57,7 +57,7 @@ export const ModalContent = styled.div`
       width: 100%;
       height: 55%;
     }
-    .ContentDetals{
+    .ContentDetals {
       width: 100%;
       height: 45%;
       border-top: 1px solid #cecece;
@@ -90,6 +90,7 @@ export const Content = styled.div`
     text-align: left;
     padding: 0 0 0 5%;
     max-height: 40%;
+    width: 100%;
   }
   footer {
     width: 100%;
@@ -104,7 +105,6 @@ export const Content = styled.div`
     max-height: 35px;
     overflow-x: auto;
     margin: 3% 0 0 0;
-
   }
   .ProdTitle:-webkit-scrollbar {
     width: 2px;
@@ -144,9 +144,9 @@ export const Content = styled.div`
       color: #767070;
       margin: 5% 0;
     }
-    footer{
+    footer {
       height: 17%;
-    max-height: 23%;
+      max-height: 23%;
     }
     .btnRequest {
       width: 100%;

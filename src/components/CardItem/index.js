@@ -1,39 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import * as C from "./style";
-import {ModalProduct} from "../Modals/ModalProduct"
+import { ModalProduct } from "../Modals/ModalProduct";
 
 export const CardItem = ({ product }) => {
+  const [productState, setProductState] = useState(null);
+  const MyPhone = process.env.REACT_APP_MY_NUMBER;
 
-  const [productState, setProductState] = useState(null); 
-const MyPhone = process.env.REACT_APP_MY_NUMBER;
-
-
-
-  function whatsappLinkGenerator ( productTitle, productPrice){
-    const message =  `http://api.whatsapp.com/send?l=pt_BR&phone=+${MyPhone}&text=Olá jú ! Eu Tenho interesse no produto ${productTitle}, de preço: ${productPrice}. Ainda estar disponível ?`;
-    window.location.href = message
-    
+  function whatsappLinkGenerator(productTitle, productPrice) {
+    const message = `http://api.whatsapp.com/send?l=pt_BR&phone=+${MyPhone}&text=Olá jú ! Eu Tenho interesse no produto ${productTitle}, de preço: ${productPrice}. Ainda estar disponível ?`;
+    window.location.href = message;
   }
-
 
   return (
     <C.Container>
-      <div className="imgContent" onClick={()=>setProductState(product.id)}>
-        <img
-          src={product.imageUrl}
-          alt="perfume natura"
-        />
+      <div className="imgContent" onClick={() => setProductState(product.id)}>
+        <img src={product.imageUrl} alt="perfume natura" />
       </div>
-      <div className="DescriptionContent" >
+      <div className="DescriptionContent">
         <h3 className="ProdTitle">{product.title}</h3>
         <small className="ProdInStock">{product.qtdInStock} em estoque</small>
         <h4 className="price">R$ {product.price} </h4>
       </div>
-      <button className="btnRequest" onClick={()=>whatsappLinkGenerator(product.title, product.price)}>
+      <button
+        className="btnRequest"
+        onClick={() => whatsappLinkGenerator(product.title, product.price)}
+      >
         Solicitar<i className="fab fa-whatsapp"></i>
       </button>
-      <ModalProduct isOpen={Boolean(productState)} onClickBtnClose={()=>setProductState(null)} item={product}/>
-
+      <ModalProduct
+        isOpen={Boolean(productState)}
+        onClickBtnClose={() => setProductState(null)}
+        item={product}
+      />
     </C.Container>
   );
 };
