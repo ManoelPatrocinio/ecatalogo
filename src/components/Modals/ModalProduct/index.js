@@ -1,5 +1,6 @@
 import * as C from "./style";
 import  ReactDOM  from "react-dom";
+import ReactGA from 'react-ga';
 
 const  portalRoot = document.getElementById('root_portal')
 
@@ -12,7 +13,11 @@ export const ModalProduct = ({isOpen,onClickBtnClose,item}) => {
   function whatsappLinkGenerator ( productTitle, productPrice){
     const message =  `http://api.whatsapp.com/send?l=pt_BR&phone=+${MyPhone}&text=Olá jú ! Eu Tenho interesse no produto ${productTitle}, de preço: ${productPrice}. Ainda estar disponível ?`;
 
-    window.location.href = message
+    window.location.href = message;
+    ReactGA.event({
+      category: 'Button',
+      action: `click on solicitar button from Product: ${productTitle}`
+    })
     
   }
   return ReactDOM.createPortal(

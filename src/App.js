@@ -1,5 +1,5 @@
 import * as C from "./App.style";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { Categorias } from "./components/Categorias";
 import { CardItem } from "./components/CardItem";
@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 import { ModalHelper } from "./components/Modals/ModalHelper";
 import { Produtos } from "./data/productList";
 import { NotFound } from "./components/NotFoundPages";
+import ReactGA from 'react-ga';
 
 function App() {
   const [helper, sethelper] = useState(false);
@@ -22,7 +23,11 @@ function App() {
     );
   };
 
-  console.log("filter", filterByCategory());
+  useEffect(()=>{
+    ReactGA.initialize('G-FB7856SED9');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  },[])
+
   return (
     <C.Container>
       <C.Fixed>
