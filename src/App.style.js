@@ -4,6 +4,44 @@ export const Container = styled.div`
   display: block;
   width: 100%;
   height: 100%;
+
+  .link-top {
+    position: fixed;
+    right: 3rem;
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff7c34;
+    font-size: 2rem;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 1px #cecece;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .link-top {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color:#ff7c34d9;
+      color: #fff;
+      border-radius: 50%;
+      right: 2% !important;
+      bottom: 1.5rem !important;
+      font-size: 1.5rem;
+      &:hover {
+        font-size: 1.7rem;
+        text-shadow: 1px 1px 1px #cecece;
+      }
+    }
+  }
 `;
 
 export const Fixed = styled.div`

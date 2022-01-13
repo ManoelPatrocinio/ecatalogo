@@ -34,8 +34,7 @@ function App() {
         <Categorias setValue={setCatSelected} />
       </C.Fixed>
 
-      <C.Main>
-    
+      <C.Main id="main">
         <C.SectionContent>
           <C.SectionTitle>
             <div className="titleLine"></div>
@@ -70,6 +69,10 @@ function App() {
         isOpenHelp={Boolean(helper)}
         onClickBtnClose={() => sethelper(false)}
       />
+
+      <a href="#main" className="link-top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
     </C.Container>
   );
 }
