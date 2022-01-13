@@ -14,6 +14,11 @@ function App() {
   const [catSelected, setCatSelected] = useState("Perfumaria");
   const [search, setSearch] = useState("");
 
+  useEffect(()=>{
+    ReactGA.initialize('G-5R5R7Q7KSD');
+    ReactGA.pageview('/');
+  },[])
+
   function filterByCategory() {
     return Produtos.filter((item) => item.category === catSelected);
   }
@@ -23,10 +28,6 @@ function App() {
     );
   };
 
-  useEffect(()=>{
-    ReactGA.initialize('G-5R5R7Q7KSD');
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  },[])
 
   return (
     <C.Container>
