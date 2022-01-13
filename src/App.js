@@ -16,7 +16,7 @@ function App() {
 
   useEffect(()=>{
     ReactGA.initialize('G-5R5R7Q7KSD');
-    ReactGA.pageview('/');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   },[])
 
   function filterByCategory() {
