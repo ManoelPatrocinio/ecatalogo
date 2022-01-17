@@ -16,7 +16,7 @@ function App() {
 
   useEffect(()=>{
     ReactGA.initialize('G-5R5R7Q7KSD');
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview('/');
   },[])
 
   function filterByCategory() {
@@ -37,14 +37,15 @@ function App() {
           setValue={setSearch}
           value={search}
         />
-        <Categorias setValue={setCatSelected} />
+        <Categorias setValue={setCatSelected} setVarSearch={setSearch} />
       </C.Fixed>
 
       <C.Main id="main">
         <C.SectionContent>
           <C.SectionTitle>
             <div className="titleLine"></div>
-            <h1> {catSelected}</h1>
+            {!search ? ( <h1> {catSelected}</h1>): ( <h1> Resultado da Busca</h1>)}
+           
             <div className="titleLine"></div>
           </C.SectionTitle>
           {!search ? (
@@ -77,7 +78,7 @@ function App() {
       />
 
       <a href="#main" className="link-top">
-        <i class="fas fa-arrow-up"></i>
+        <i className="fas fa-arrow-up"></i>
       </a>
     </C.Container>
   );

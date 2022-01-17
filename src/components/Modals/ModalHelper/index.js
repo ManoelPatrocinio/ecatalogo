@@ -24,10 +24,10 @@ export const ModalHelper = ({ isOpenHelp, onClickBtnClose }) => {
               {" "}
               <img src={MySelf} alt="perfumeX natura" />{" "}
             </div>
-            <h1>Olá, Seja Bem vindo ao meu catálogo Digital !</h1>
+            <h1>Olá, Seja Bem vindo(a) ao meu catálogo Digital !</h1>
             <p>
-              Nesse catálogo você encontrará todos os produtos que eu possou
-              para pronta entrega. Se eu não tiver o que você estar procurando
+              Nesse catálogo você encontrará todos os produtos que eu possuo
+              para pronta entrega. Se eu não tiver o que você está procurando
               entre em contato comigo, pelo número:
               <a  href={linkWhatsapp}  target="_blank"  rel="noopener noreferrer" id="HelperNumberLink"> {MyPhone}</a>.
             </p>

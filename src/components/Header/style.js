@@ -129,6 +129,7 @@ export const ItemHeaderContent = styled.div`
       width: 16rem !important;
       bottom: 1.6rem;
       height: 3rem;
+      max-width:70%;
      
     }
     .formSearch{
