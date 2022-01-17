@@ -19,6 +19,7 @@ export const Container = styled.div`
     color: #ff7c34;
     font-size: 2rem;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       font-size: 2.5rem;

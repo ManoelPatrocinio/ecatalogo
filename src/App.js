@@ -37,10 +37,10 @@ function App() {
           setValue={setSearch}
           value={search}
         />
-        <Categorias setValue={setCatSelected} setVarSearch={setSearch} />
+        <Categorias setValue={setCatSelected} />
       </C.Fixed>
 
-      <C.Main id="main">
+      <C.Main >
         <C.SectionContent>
           <C.SectionTitle>
             <div className="titleLine"></div>
@@ -77,9 +77,9 @@ function App() {
         onClickBtnClose={() => sethelper(false)}
       />
 
-      <a href="#main" className="link-top">
+      <span  className="link-top" onClick={()=>{window.scrollTo(0,0)}}>
         <i className="fas fa-arrow-up"></i>
-      </a>
+      </span>
     </C.Container>
   );
 }

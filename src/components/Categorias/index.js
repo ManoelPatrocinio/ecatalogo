@@ -1,5 +1,5 @@
 import * as C from "./style";
-export const Categorias = ({setValue,setVarSearch}) => {
+export const Categorias = ({setValue}) => {
 
   return(
     <C.Container>
