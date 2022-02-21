@@ -1,23 +1,18 @@
-import * as C from "./App.style";
+import * as C from "./style";
 import React, { useEffect, useState } from "react";
-import { Header } from "./components/Header";
-import { Categorias } from "./components/Categorias";
-import { CardItem } from "./components/CardItem";
-import { Footer } from "./components/Footer";
-import { ModalHelper } from "./components/Modals/ModalHelper";
-import { Produtos } from "./data/productList";
-import { NotFound } from "./components/NotFoundPages";
-import ReactGA from 'react-ga';
+import { Header,Categorias,CardItem, Footer, ModalHelper, NotFound } from "../../components";
+import { Produtos } from "../../data/productList";
+import ReactGA from "react-ga";
 
-function App() {
+export function Home() {
   const [helper, sethelper] = useState(false);
   const [catSelected, setCatSelected] = useState("Perfumaria");
   const [search, setSearch] = useState("");
 
-  useEffect(()=>{
+  useEffect(() => {
     ReactGA.initialize('G-5R5R7Q7KSD');
     ReactGA.pageview('/');
-  },[])
+  }, []);
 
   function filterByCategory() {
     return Produtos.filter((item) => item.category === catSelected);
@@ -27,7 +22,6 @@ function App() {
       produto.title.toLowerCase().includes(search.toLowerCase())
     );
   };
-
 
   return (
     <C.Container>
@@ -40,12 +34,12 @@ function App() {
         <Categorias setValue={setCatSelected} />
       </C.Fixed>
 
-      <C.Main >
+      <C.Main>
         <C.SectionContent>
           <C.SectionTitle>
             <div className="titleLine"></div>
-            {!search ? ( <h1> {catSelected}</h1>): ( <h1> Resultado da Busca</h1>)}
-           
+            {!search ? <h1> {catSelected}</h1> : <h1> Resultado da Busca</h1>}
+
             <div className="titleLine"></div>
           </C.SectionTitle>
           {!search ? (
@@ -77,11 +71,15 @@ function App() {
         onClickBtnClose={() => sethelper(false)}
       />
 
-      <span  className="link-top" onClick={()=>{window.scrollTo(0,0)}}>
+      <span
+        className="link-top"
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+      >
         <i className="fas fa-arrow-up"></i>
       </span>
     </C.Container>
   );
 }
 
-export default App;
