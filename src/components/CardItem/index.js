@@ -20,7 +20,7 @@ export const CardItem = ({ product }) => {
 
   return (
     <C.Container>
-      <div className="imgContent" onClick={() => setProductState(product.id)}>
+      <div className="imgContent" onClick={() => setProductState(product._id)}>
         <img src={product.imageUrl} alt="perfume natura" />
       </div>
       <div className="DescriptionContent">

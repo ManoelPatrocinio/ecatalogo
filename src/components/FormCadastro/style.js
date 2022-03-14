@@ -11,7 +11,9 @@ export const Container = styled.div`
   .titleLine,
   .form,
   .inputGroup label,
-  .inputGroup input {
+  .inputGroup input,
+  .inputGroup textarea,
+  .inputGroup select{
     width: 100%;
   }
   .titleLine {
@@ -20,8 +22,6 @@ export const Container = styled.div`
   }
   .headerSection h3 {
     font-size: 1.25rem;
-    color: #ff7c34;
-    text-align: left;
     font-weight: 500;
   }
   .headerSection h3,
@@ -35,25 +35,31 @@ export const Container = styled.div`
     flex-wrap: wrap;
     padding: 2% 0 0 0;
   }
-
+  .row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .row input,
+  .row textarea,
+  .row select{
+    padding: 2% 1%;
+  }
   .inputGroup {
-    width: 60%;
+    max-width: 50%;
+    width: 24%;
+
+    min-width: 20%;
     height: 4rem;
     margin: 0 0 2% 0;
   }
-  .inputGroup input {
-    padding: 2% 1%;
-    margin: 1% 0 0 0;
+
+  #inputCadName,
+  #inputCadDesc{
+    width: 47%;
   }
-  #inputGroupPreco,
-  #inputGroupFile {
-    width: 27%;
-    margin: 0 0 0 3%;
-  }
-  #inputGroupPreco input,
-  #inputGroupFile input {
-    padding: 12px 0;
-  }
+ 
+
   .btnFormFinalizar {
     width: 13.313rem;
     height: 2.5rem;
@@ -63,12 +69,13 @@ export const Container = styled.div`
     border: none;
   }
   @media (max-width: 574px) {
-    .form {
+    .form,.row {
       flex-direction: column;
       padding: 2%;
     }
     .inputGroup {
-      width: 100%;
+      max-width: 100%;
+      width: 100% !important;
       margin: 0 0 4% 0;
     }
     #inputGroupPreco,

@@ -1,24 +1,36 @@
 import * as C from "./style";
 import React, { useEffect, useState } from "react";
 import { Header,Categorias,CardItem, Footer, ModalHelper, NotFound } from "../../components";
-import { Produtos } from "../../data/productList";
 import ReactGA from "react-ga";
+import { api } from "../../api/api";
 
 export function Home() {
   const [helper, sethelper] = useState(false);
   const [catSelected, setCatSelected] = useState("Perfumaria");
   const [search, setSearch] = useState("");
+  const [produts, setProduts] = useState([]);
+
+  const getAll = async () => {
+    await api
+      .get("/")
+      .then((response) => setProduts(response.data))
+      .catch((err) => {
+        console.error("ops! ocorreu um erro: " + err);
+      });
+  };
 
   useEffect(() => {
     ReactGA.initialize('G-5R5R7Q7KSD');
     ReactGA.pageview('/');
+    getAll()
+
   }, []);
 
   function filterByCategory() {
-    return Produtos.filter((item) => item.category === catSelected);
+    return produts.filter((item) => item.category === catSelected && item.status !== false);
   }
   const filterBySearch = () => {
-    return Produtos.filter((produto) =>
+    return produts.filter((produto) =>
       produto.title.toLowerCase().includes(search.toLowerCase())
     );
   };
@@ -64,6 +76,7 @@ export function Home() {
             </C.CardContent>
           )}
         </C.SectionContent>
+        
       </C.Main>
       <Footer />
       <ModalHelper

@@ -9,6 +9,8 @@
     text-decoration: none;
     list-style: none;
 }
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -21,6 +23,7 @@ img{
 button{
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 
 *::-webkit-scrollbar {
@@ -38,3 +41,16 @@ button{
     -webkit-box-shadow: inset 0 0 6px #ff7c34; 
     box-shadow:inset 0 0 6px #ff7c34 ;
 }
+
+:root {
+    --fontColorQueen: #1baf67;
+    --fontColorGray: #767070;
+    --FontColorBack: #182135;
+    --fontColorOrange: #ff7c34;
+  
+    --Queen: #1baf67;
+    --Orange: #ff7c34;
+    --Gray: #C4C4C4;
+  
+
+  }
