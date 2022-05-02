@@ -95,6 +95,12 @@ export const SectionTitle = styled.div`
     height: 2px;
     background-color: #ff7c34;
   }
+
+  @media (max-width: 480px) {
+    h1{
+      font-size: 1rem
+    }
+  }
 `;
 
 export const CardContent = styled.div`
