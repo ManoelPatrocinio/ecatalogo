@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled,{ keyframes }  from "styled-components";
 
 export const Container = styled.div`
   display: block;
@@ -103,4 +103,34 @@ export const CardContent = styled.div`
   width: 100%;
   height: auto;
   justify-content: space-around;
+`;
+
+
+const spin = keyframes`
+  to {
+		transform: rotate(360deg);
+	}
+`;
+export const ScreenLoading = styled.div`
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+
+  .loading {
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--Orange);
+    border-top-color: #ff7b348c;
+    border-radius: 50%;
+    animation: ${spin} 1s linear infinite;
+  }
+  p {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 2rem;
+    color: var(--fontColorOrange);
+  }
 `;

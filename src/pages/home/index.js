@@ -1,7 +1,6 @@
 import * as C from "./style";
 import React, { useEffect, useState } from "react";
 import { Header,Categorias,CardItem, Footer, ModalHelper, NotFound } from "../../components";
-import ReactGA from "react-ga";
 import { api } from "../../api/api";
 
 export function Home() {
@@ -9,7 +8,6 @@ export function Home() {
   const [catSelected, setCatSelected] = useState("Perfumaria");
   const [search, setSearch] = useState("");
   const [produts, setProduts] = useState([]);
-
   const getAll = async () => {
     await api
       .get("/")
@@ -20,8 +18,6 @@ export function Home() {
   };
 
   useEffect(() => {
-    ReactGA.initialize('G-5R5R7Q7KSD');
-    ReactGA.pageview('/');
     getAll()
 
   }, []);
@@ -56,12 +52,18 @@ export function Home() {
           </C.SectionTitle>
           {!search ? (
             <C.CardContent>
+              
               {filterByCategory().length > 0 ? (
                 filterByCategory().map((item, index) => (
                   <CardItem key={index} product={item} />
                 ))
               ) : (
-                <NotFound />
+                
+                  <C.ScreenLoading>
+                    <div className="loading"></div>
+                    <p>loading...</p>
+                  </C.ScreenLoading>
+                
               )}
             </C.CardContent>
           ) : (

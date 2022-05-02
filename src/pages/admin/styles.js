@@ -41,6 +41,7 @@ export const Container = styled.div`
       left: 0;
       top: 0;
       height: 100vh;
+      z-index: 10;
     }
     main {
       width: 85%;
