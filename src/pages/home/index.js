@@ -27,7 +27,7 @@ export function Home() {
   }
   const filterBySearch = () => {
     return produts.filter((produto) =>
-      produto.title.toLowerCase().includes(search.toLowerCase())
+      produto.title.toLowerCase().includes(search.toLowerCase()) && produto.status !== false
     );
   };
 
