@@ -6,6 +6,30 @@ export const api = axios.create({
   baseURL: process.env.REACT_APP_URL_BACKEND,
 });
 
+
+export const apiLogin = async (user) => {
+  
+  await api
+    .post("/login", user)
+    .then((response) => {
+      Swal.fire({
+        icon: "success",
+        title: "Success !",
+        showConfirmButton: true,
+      })
+  
+      
+    })
+    .catch((err) => {
+      Swal.fire({
+        icon: "error",
+        title: "Erro com as credenciais",
+        showConfirmButton: true,
+      })
+      console.error("ops! ocorreu um erro no login: " + err);
+    });
+};
+
 export const apiDelete = async (productId) => {
   await api
     .delete(`/admin/delete/${productId}`)
@@ -59,7 +83,7 @@ export const apiCreate = async (product) => {
     .catch((err) => {
       Swal.fire({
         icon: "error",
-        title: "Opss Erro ao Adicionar Produto ",
+        title: "Opss Erro ao Adicionar Produto ! ",
         showConfirmButton: true,
       })
       console.error("ops! ocorreu um erro: " + err);
