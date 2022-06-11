@@ -5,6 +5,13 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
 
+  #carouselHeaderPromotion{
+    height: 62vh;
+  }
+  .imgSlide{
+    object-fit: cover !important;
+  }
+
   .link-top {
     position: fixed;
     right: 3rem;

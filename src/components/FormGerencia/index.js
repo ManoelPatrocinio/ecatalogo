@@ -101,7 +101,7 @@ export const FormGerencia = ({ products }) => {
                     <div className="inputGroup" id="inputGroupImage">
                       <label htmlFor="fileImg"> Selecione a imagem  &#187;</label>
 
-                      <input type="file" id="fileImg" />
+                      <input type="text" id="fileImg"  onChange={(e) => setInput({ imageUrl: e.target.value })}/>
                     </div>
                   </div>
                   <div className="inputGroup" id="btnGerenciaOptionContent">

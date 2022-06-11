@@ -35,11 +35,11 @@ export const ModalProduct = ({isOpen,onClickBtnClose,item}) => {
             <small className="ProdInStock">{item.qtdInStock} em estoque</small>
           </header>
           <article>
-            <h4>
+            <h4 className="fs-6 mb-0">
               Preço: <span className="price">R$ {item.price}</span>{" "}
             </h4>{" "}
             <br />
-            <h4>Descrição:</h4>
+            <h4 className="fs-6">Descrição:</h4>
             {item.description ? (<p>{item.description}</p>) : <p></p>}  
            
           </article>

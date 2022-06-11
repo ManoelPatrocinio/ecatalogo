@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 import * as C from "./style";
 const InitialProductState = {
   category: "",
-  imageUrl: "faltarisso",
+  imageUrl: "",
   title: "",
   qtdInStock: 0,
   price: 0,
@@ -64,7 +64,7 @@ export const FormCadastro = () => {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row mt-5">
           <div className="inputGroup">
             <label>Categoria</label>
 
@@ -88,15 +88,15 @@ export const FormCadastro = () => {
           <div className="inputGroup">
             <label>Qtd.Em Estoque</label>
             <input
-              type="text"
+              type="number"
               placeholder="insira o preço do produto"
               onChange={(e) => setInput({ qtdInStock: e.target.value })}
             />
           </div>
 
           <div className="inputGroup">
-            <label>Imagem</label>
-            <input type="file" />
+            <label>Imagem(url)</label>
+            <input type="text" onChange={(e) => setInput({ imageUrl: e.target.value })}/>
           </div>
         </div>
 
