@@ -10,8 +10,8 @@ import {
   NotFound,
 } from "../../components";
 import { api } from "../../api/api";
-import imgSlide1 from "../../assets/images/slide1.jpg";
-import imgSlide2 from "../../assets/images/slide2.png";
+// import imgSlide1 from "../../assets/images/slide1.jpg";
+// import imgSlide2 from "../../assets/images/slide2.png";
 
 export function Home() {
   const [helper, sethelper] = useState(false);
@@ -54,7 +54,7 @@ export function Home() {
         />
         <Categorias setValue={setCatSelected} />
       </C.Fixed>
-      <div
+      {/* <div
         id="carouselHeaderPromotion"
         className="carousel slide col-12"
         data-bs-ride="carousel"
@@ -116,7 +116,7 @@ export function Home() {
           ></span>
           <span className="visually-hidden">Next</span>
         </button>
-      </div>
+      </div> */}
       <C.Main>
         <C.SectionContent>
           <C.SectionTitle>
