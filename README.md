@@ -6,19 +6,22 @@
 
 ## 💻 Sobre o projeto
 
-Este projeto é um Catalogo digital com link de envio do pedido de compra, já com as informações do produto selecionado, pelo whatsapp.
+Este projeto é um Catalogo digital, com o envio das informações dos produtos selecionados já para o whatsapp da vendedora, usando a API do WhatsApp.
+Também foi feito um pinel de gerenciamento, para adição e atualização dos produtos pela vededora.
 
 [Confira o projeto](https://ecatalogo-manoelpatrocinio.vercel.app/) 
 
 
 ## TECNOLOGIAS USADAS
 
-      *JavaScript
-      *ReactJS
-      *Styled Components
+* JavaScript
+* ReactJS
+* Styled Components
       
 
-Layout
+## Proxímas Imprementações
+* Ajuste do Painel administrativo
+* adição do JWT e validações no login
 
 ## 🎨 Layout
 
