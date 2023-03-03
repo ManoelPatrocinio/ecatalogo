@@ -4,7 +4,7 @@ import * as C from "./style";
 
 
 export const CardItem = ({ product }) => {
-  const [productState, setProductState] = useState(null);
+  const [handleModalVisibility, setHandleModalVisibility] = useState(false);
   const MyPhone = process.env.REACT_APP_MY_NUMBER;
 
   function whatsappLinkGenerator(productTitle, productPrice) {
@@ -15,7 +15,7 @@ export const CardItem = ({ product }) => {
 
   return (
     <C.Container>
-      <div className="imgContent" onClick={() => setProductState(product._id)}>
+      <div className="imgContent" onClick={() => setHandleModalVisibility(!handleModalVisibility)}>
         <img src={product.imageUrl} alt="perfume natura" />
       </div>
       <div className="DescriptionContent">
@@ -30,8 +30,8 @@ export const CardItem = ({ product }) => {
         Solicitar<i className="fab fa-whatsapp"></i>
       </button>
       <ModalProduct
-        isOpen={productState}
-        onClickBtnClose={() => setProductState(null)}
+        isOpen={handleModalVisibility}
+        onClickBtnClose={() => setHandleModalVisibility(null)}
         item={product}
       />
     </C.Container>

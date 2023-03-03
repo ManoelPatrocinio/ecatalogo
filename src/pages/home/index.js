@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React, { useEffect, useState } from "react";
-import { api } from "../../api/api";
 import {
   CardItem,
   Categorias,
@@ -19,14 +18,14 @@ export function Home() {
   const [catSelected, setCatSelected] = useState("Perfumaria");
   const [search, setSearch] = useState("");
   const [produts, setProduts] = useState([]);
-  const getAll = async () => {
-    await api
-      .get("/")
-      .then((response) => setProduts(response.data))
-      .catch((err) => {
-        console.error("ops! ocorreu um erro: " + err);
-      });
-  };
+  // const getAll = async () => {
+  //   await api
+  //     .get("/")
+  //     .then((response) => setProduts(response.data))
+  //     .catch((err) => {
+  //       console.error("ops! ocorreu um erro: " + err);
+  //     });
+  // };
 
   useEffect(() => {
     // getAll();
@@ -134,10 +133,7 @@ export function Home() {
                   <CardItem key={index} product={item} />
                 ))
               ) : (
-                <C.ScreenLoading>
-                  <div className="loading"></div>
-                  <p>loading...</p>
-                </C.ScreenLoading>
+               <NotFound />
               )}
             </C.CardContent>
           ) : (

@@ -15,7 +15,7 @@ export const ModalProduct = ({isOpen,onClickBtnClose,item}) => {
     window.location.href = message;
     
   }
-  console.log('JKJKJ')
+
   return ReactDOM.createPortal(
     <C.Container onClick={onClickBtnClose}>
       <C.ModalContent>
