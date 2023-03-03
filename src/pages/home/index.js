@@ -1,15 +1,16 @@
 // @ts-nocheck
-import * as C from "./style";
 import React, { useEffect, useState } from "react";
+import { api } from "../../api/api";
 import {
-  Header,
-  Categorias,
   CardItem,
+  Categorias,
   Footer,
+  Header,
   ModalHelper,
   NotFound,
 } from "../../components";
-import { api } from "../../api/api";
+import { Produtos } from "../../data/productList";
+import * as C from "./style";
 // import imgSlide1 from "../../assets/images/slide1.jpg";
 // import imgSlide2 from "../../assets/images/slide2.png";
 
@@ -28,7 +29,8 @@ export function Home() {
   };
 
   useEffect(() => {
-    getAll();
+    // getAll();
+    setProduts(Produtos)
   }, []);
 
   function filterByCategory() {

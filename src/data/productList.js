@@ -3,7 +3,7 @@ export const Produtos = [
     {
         id: 1,
         category: "Perfumaria",
-        imageUrl:"https://static.natura.com/cdn/ff/po9jV1Ghi9iNE4PtGLI1AdYXDx-vPOx-fVSU1_5Id7s/1640585076/public/products/77431_5.jpg",
+        imageUrl:"https://i.ibb.co/2WF8mTS/68daab7ec224f8df147cf39c29f213c8.jpg",
         title:"Biografia Inspire Desodorante Colônia Feminino",
         qtdInStock: 1,
         price: 115.00,
@@ -22,7 +22,7 @@ export const Produtos = [
     {
         id: 3,
         category: "Perfumaria",
-        imageUrl:"https://static.natura.com/cdn/ff/Kkqw5iRwCBZzzilX0J-0q0T8aO8tHiX5FTQiPZH8UIQ/1640584463/public/products/101318_3.jpg",
+        imageUrl:"https://i.ibb.co/8dYX2hs/61p-G0-Rj-Vf-RS-AC-SX425.jpg",
         title:"Presente Natura Ekos Madeira Em Flor",
         qtdInStock: 1,
         price:150.00,
@@ -41,7 +41,7 @@ export const Produtos = [
     {
         id: 5,
         category: "Perfumaria",
-        imageUrl:"https://static.natura.com/cdn/ff/iSP-0rlIR1RObQWfjeX88bxR2KmICcBAd3n85WerJgc/1640585475/public/products/107691_0.jpg",
+        imageUrl:"https://i.ibb.co/SnvpqRS/71cd-Ylth-PSL-AC-SX425.jpg",
         title:"Presente Natura Kaiak Feminino",
         qtdInStock: 1,
         price:183.70,
@@ -103,16 +103,16 @@ export const Produtos = [
         description: "À vista, o preço pode ser negociável, entre em contato ;)"
 
     },
-    {
-        id: 11,
-        category: "Perfumaria",
-        imageUrl:"https://static.natura.com/cdn/ff/o7QgaeT31eHNSM1NzhbMRrX9ctcKbxWj-9DErvBLlJ4/1641234299/public/products/56747_3.jpg",
-        title:"Refil Desodorante Corporal Kaiak Urbe",
-        qtdInStock: 1,
-        price:36.00,
-        description: "À vista, o preço pode ser negociável, entre em contato ;)"
+    // {
+    //     id: 11,
+    //     category: "Perfumaria",
+    //     imageUrl:"https://static.natura.com/cdn/ff/o7QgaeT31eHNSM1NzhbMRrX9ctcKbxWj-9DErvBLlJ4/1641234299/public/products/56747_3.jpg",
+    //     title:"Refil Desodorante Corporal Kaiak Urbe",
+    //     qtdInStock: 1,
+    //     price:36.00,
+    //     description: "À vista, o preço pode ser negociável, entre em contato ;)"
 
-    },
+    // },
     {
         id: 12,
         category: "Perfumaria",
