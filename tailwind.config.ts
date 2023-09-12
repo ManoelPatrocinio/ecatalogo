@@ -22,6 +22,7 @@ const config: Config = {
 
         'green-700' : '#1BCB75',
         'green-500' : '#00E676',
+        'beige-400':"#FBF2C0",
 
         'black-900' : '#2B2B2B',
         'black-700' : '#4D4D4D',

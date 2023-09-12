@@ -9,12 +9,11 @@ import { useState } from "react";
 
 export default function Home() {
   const [catSelected, setCatSelected] = useState("Perfumaria");
-
   return (
     <>
       <Header />
       <Navbar toggleCategory={setCatSelected}/>
-      <main className="py-4">
+      <main className="py-4 z-0">
         <Section_title title={catSelected}/>
         <div className="w-full flex flex-wrap  justify-around gap-4 pt-4 px-2 ">
           {products.map((product)=>(
