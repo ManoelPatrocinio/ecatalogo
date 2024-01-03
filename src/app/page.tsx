@@ -1,5 +1,6 @@
 'use client'
 import { CardProduct } from "@/components/Cardproduct";
+import { Footer } from "@/components/Footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Section_title from "@/components/Section_title";
@@ -21,6 +22,7 @@ export default function Home() {
           ))}
         </div>
       </main>
+      <Footer/>
     </>
   )
 }
